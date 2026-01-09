@@ -5,6 +5,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      // Add base configuration so built assets load correctly on GitHub Pages
+      base: '/jry_resume_web/',
       server: {
         port: 3000,
         host: '0.0.0.0',
